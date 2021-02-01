@@ -34,7 +34,7 @@ class RolesAssignmentController
         return View::make('laratrust::panel.roles-assignment.index', [
             'models' => $modelsKeys,
             'modelKey' => $modelKey,
-            'users' => $userModel::query()
+            'users' => $userModel::query()->where('is_admin', true)
                 ->withCount(['roles', 'permissions'])
                 ->simplePaginate(10),
         ]);
