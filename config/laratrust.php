@@ -306,7 +306,7 @@ return [
         | Laratrust authenticated user's guard
         |--------------------------------------------------------------------------
         |
-        | Get the current logged in user's guard.
+        | Get the current logged in user's guard....
         |
         */
         'guard' => 'web', 
