@@ -133,6 +133,6 @@ class Laratrust
      */
     public function user()
     {
-        return $this->app->auth->user();
+        return auth($this->app['config']->get('laratrust.guard'))->user();
     }
 }
